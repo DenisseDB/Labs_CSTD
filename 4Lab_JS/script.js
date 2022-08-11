@@ -72,7 +72,7 @@ if (is_hungry) {
   alert("tienes que comer bien aunque no tegas hambre");
 }
 
-// funciones modernas
+// FUNCIONES MODERNAS
 // despues de la flecha va el valor de retorno
 
 // aqui la declaro como const para poder imprimirla
@@ -86,3 +86,24 @@ const platillo_fuerte = (platillo) => {
 };
 // le mando el valor de entrada
 platillo_fuerte("milanesa");
+
+// ARREGLOS
+const menu = ["Papa al horno", "Arrachera", "Nopales"];
+console.log(menu); // imprime todo lo que se encuentra en el arreglo
+
+// con let p in menu puedo recorrer todas las llaves de mi arreglo
+for (let p in menu) {
+  console.log(menu[p]);
+}
+
+// otra manera de recorrer el arreglo
+for (let p of menu) {
+  console.log(p);
+}
+
+// en la localidad 10 se agrega pasta
+menu[10] = "Pasta";
+console.log(menu);
+
+menu.lenght = 2;
+console.log(menu);
