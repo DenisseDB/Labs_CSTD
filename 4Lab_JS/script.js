@@ -56,7 +56,16 @@ console.log("Hola " + nombre + "!");
 const is_hungry = confirm("tienes hambre?");
 
 if (is_hungry) {
-  alert("ya mero es hora de la comida");
+  alert("ya casi es hora de la comida");
 } else {
   alert("tienes que comer bien aunque no tegas hambre");
 }
+
+// declarar funciones
+function comer() {
+  const comida = "Picadillo";
+  console.log(comida);
+  return true;
+}
+
+comer();
