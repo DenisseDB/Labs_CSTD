@@ -52,20 +52,37 @@ alert("esto es una alerta");
 const nombre = prompt("como te llamas?");
 console.log("Hola " + nombre + "!");
 
-// box para confirmar una pregunta, con cancelar y aceptar
-const is_hungry = confirm("tienes hambre?");
-
-if (is_hungry) {
-  alert("ya casi es hora de la comida");
-} else {
-  alert("tienes que comer bien aunque no tegas hambre");
-}
-
 // declarar funciones
 function comer() {
   const comida = "Picadillo";
   console.log(comida);
   return true;
 }
+// en esta nueva constante, mando llamar la funcion comida
+// apunta a la funcion
+const comida = comer;
 
-comer();
+// box para confirmar una pregunta, con cancelar y aceptar
+const is_hungry = confirm("tienes hambre?");
+
+if (is_hungry) {
+  alert("ya casi es hora de la comida");
+  comida();
+} else {
+  alert("tienes que comer bien aunque no tegas hambre");
+}
+
+// funciones modernas
+// despues de la flecha va el valor de retorno
+
+// aqui la declaro como const para poder imprimirla
+const anon = () => console.log("funcion anonimo");
+// la impprimo en consola
+anon();
+
+// recibe un valor que es platillo
+const platillo_fuerte = (platillo) => {
+  console.log("La " + platillo + " esta delicioso");
+};
+// le mando el valor de entrada
+platillo_fuerte("milanesa");
