@@ -107,3 +107,20 @@ console.log(menu);
 
 menu.lenght = 2;
 console.log(menu);
+
+// ARREGLOS ASOCIATIVOS
+// en vez de indice podemos poner llaves
+menu["postre"] = "Ate de queso";
+console.log(menu);
+
+// HTML DINAMICO
+// recuperar el elemento con el id que le de
+const boton = document.getElementById("boton_imagen");
+
+// cuando le des click te va a mostrar algo
+boton.onclick = () => {
+  console.log("se hizo click");
+  // aqui agregamos al html la imagen del pulpo despues de que se hizo el click
+  document.getElementById("contenedor_imagen").innerHTML =
+    ' <img src = "img/pulpo1.jpeg" alt="foto de un pulpo">';
+};
