@@ -3,6 +3,10 @@ let pulpo_mundial = "Paul";
 // no es recomendable utilizar var
 var pulpo_voice = "Timoty";
 
+// contantes para evitar modificaciones externas
+const precio_comida_pulpos = 99.99;
+console.log(precio_comida_pulpos);
+
 // pruebas optimizadas assert
 // imprimir en la consola el valor de alguna variable
 // uso log para registrar algo en la bitacora
@@ -40,3 +44,19 @@ console.assert(1 === 2); // manda que la prueba falla, es false
 
 // === compara valor y tipo de dato
 // == compara valor
+
+// alerta, al incio nos manda un box con la alerta y el texto
+alert("esto es una alerta");
+
+// preguntar algo al usuario con prompt
+const nombre = prompt("como te llamas?");
+console.log("Hola " + nombre + "!");
+
+// box para confirmar una pregunta, con cancelar y aceptar
+const is_hungry = confirm("tienes hambre?");
+
+if (is_hungry) {
+  alert("ya mero es hora de la comida");
+} else {
+  alert("tienes que comer bien aunque no tegas hambre");
+}
