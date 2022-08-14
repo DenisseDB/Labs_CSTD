@@ -59,19 +59,104 @@
         </div>
 
         <div class="col l1 m2">2</div>
-
+        <div class="video-container responsive-video">
+          <iframe
+            width="853"
+            height="480"
+            src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div class="col l1 m2">3</div>
+        <p>Ingresa tu nombre</p>
+        <!--llenar un blanco-->
+        <div class="row">
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input
+                  type="text"
+                  id="autocomplete-input"
+                  class="autocomplete"
+                />
+                <label for="autocomplete-input">Denisse Dominguez</label>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col l1 m2">4</div>
+        <p>Selecciona la fecha actual</p>
+        <input type="text" class="datepicker" />
         <div class="col l1 m2">5</div>
+        <p>selecciona tu color favorito</p>
+        <form action="#">
+          <p>
+            <label>
+              <input name="group1" type="radio" checked />
+              <span>Amarillo</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span>Rosa</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="with-gap" name="group1" type="radio" />
+              <span>Azul</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input name="group1" type="radio" disabled="disabled" />
+              <span>Verde</span>
+            </label>
+          </p>
+        </form>
         <div class="col l1 m2">6</div>
+        <p>si estas seguro, envia tus resultados</p>
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+          <i class="material-icons right">send</i>
+        </button>
         <div class="col l1 m2">7</div>
-        <div class="col l1 m2">8</div>
-        <div class="col l1 m2">9</div>
-        <div class="col l1 m2">10</div>
-        <div class="col l1 m2">11</div>
-        <div class="col l1 m2">12</div>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Material Design</span>
+                <p>
+                  Material design es una plataforma que nos permite ver como se
+                  veria la combiancion de colores, como tal nos muestra un sitio
+                  base donde podemos ver como se ve en conunto la paleta de
+                  colores que hemos escogido, asi como las opciones de
+                  diferentes tonalidades y que tan bien y claro se ve esa paleta
+                  de colores
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Gracias</h5>
+            <p class="grey-text text-lighten-4">Por tu visita</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Agregar el js -->
     <!-- va hasta abajao porque con js se esta manipulando y debemos primero
     cargar todo el html para saber a que elemento se esta haciendo referencia -->
