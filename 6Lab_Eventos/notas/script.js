@@ -18,7 +18,12 @@ function feliz() {
     '<img src="img/pulpoFeliz.jpeg" alt="pulpo feliz" />';
   // cambio el texto interno del elemento que estamos obteniendo
   boton_cambio_animo.innerText = "Triste";
+  boton_cambio_animo.style.background = "#fbc02d ";
+
   is_happy = true;
+
+  // obtengo el documeto y su body y editare su color
+  // si no lo escificas se cambia todo
 }
 
 function triste() {
@@ -26,6 +31,7 @@ function triste() {
   cont_contenedor_imagen.innerHTML =
     '<img src="img/pulpoEnojado.webp" alt="pulpo enojado" />';
   boton_cambio_animo.innerText = "Feliz";
+  boton_cambio_animo.style.background = "#ffff00";
   is_happy = false;
 }
 
