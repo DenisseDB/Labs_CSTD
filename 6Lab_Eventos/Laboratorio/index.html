@@ -7,10 +7,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h3>Programación orientada a eventos</h3>
     <h6>Denisse Dominguez Bolaños</h6>
+    <!-- VALIDADOR DE CONTRASEÑAS -->
     <blockquote>
       Te ayudamos a corroborar que tus contraseñas coincidan y evites futuras
       equivocaciones
@@ -29,12 +31,138 @@
         <a class="waves-effect waves-light btn" id="verificador">Verificar</a>
       </div>
     </div>
-
+    <!-- CARRITO DE COMPRAS -->
     <blockquote>
       Bienvenido a termosLovers, contamos con una gran variedad de termos
       increibles, aqui puedes adquirirlos y ser parte de la comunidad amante de
       los termos
     </blockquote>
+    <div class="row">
+      <div class="col s12 m7 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/termo1.png" />
+            <span class="card-title">Calacatta Gold Bottle $40</span>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li>- Keeps drinks hotter or colder, for longer.</li>
+              <li>- BPA/BPS-free and reusable.</li>
+              <li>- Vacuum-insulated, food-grade 18/8 stainless steel.</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <!-- data-name: para que en data set saber que producto se añadio -->
+            <input
+              id="agregar"
+              type="number"
+              class="validate"
+              data-name="termo1"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m7 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/termo2.png" />
+            <span class="card-title">Geode Rose Bottle $33</span>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li>- Keeps drinks hotter or colder, for longer.</li>
+              <li>- BPA/BPS-free and reusable.</li>
+              <li>- Vacuum-insulated, food-grade 18/8 stainless steel.</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <!-- data-name: para que en data set saber que producto se añadio -->
+            <input
+              id="agregar"
+              type="number"
+              class="validate"
+              data-name="termo2"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m7 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/termo3.png" />
+            <span class="card-title">Blue Granite Bottle $35</span>
+          </div>
+          <div class="card-content">
+            <ul>
+              <li>- Keeps drinks hotter or colder, for longer.</li>
+              <li>- BPA/BPS-free and reusable.</li>
+              <li>- Vacuum-insulated, food-grade 18/8 stainless steel.</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <!-- data-name: para que en data set saber que producto se añadio -->
+            <input
+              id="agregar"
+              type="number"
+              class="validate"
+              data-name="termo3"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m7 l4">
+        <a id="total" class="waves-effect waves-light btn">Total: $</a>
+      </div>
+    </div>
+    <!-- PREGUNTAS -->
+    <blockquote>Preguntas y respuestas</blockquote>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"
+              >¿Por qué es una buena práctica usar JavaScript para checar que
+              sean válidos los inputs de las formas antes de enviar los datos al
+              servidor?</span
+            >
+            <p>
+              para asi evitar datos erroneos al enviar los mismos, con el
+              validador podemos corroborar que se cumpla con lo que se eta
+              solicitando y que en verdad se este mandado o insertadno los datos
+              esperados de la forma correcta y coherente
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"
+                >¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</span
+              >
+              <p>
+                Quitando la funcion OnSubmir
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title"
+                  >Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</span
+                >
+                <p>
+                  No es buena practica ya que con esa se validan las entradas para poder generar los resultados esperados y no romper el motivo ni la forma de interactuar de la pagina
+                </p>
+              </div>
+            </div>
+          </div>
+    </div>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
