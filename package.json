@@ -1,0 +1,23 @@
+{
+  "name": "labs_cstd",
+  "version": "1.0.0",
+  "description": "Labortatorios",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisseDB/Labs_CSTD.git"
+  },
+  "keywords": [
+    "construccion",
+    "software"
+  ],
+  "author": "Denisse Dominguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisseDB/Labs_CSTD/issues"
+  },
+  "homepage": "https://github.com/DenisseDB/Labs_CSTD#readme"
+}
