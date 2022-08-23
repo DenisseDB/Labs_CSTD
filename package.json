@@ -4,6 +4,7 @@
   "description": "Labortatorios",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/DenisseDB/Labs_CSTD/issues"
   },
-  "homepage": "https://github.com/DenisseDB/Labs_CSTD#readme"
+  "homepage": "https://github.com/DenisseDB/Labs_CSTD#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
