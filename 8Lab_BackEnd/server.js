@@ -1,11 +1,11 @@
 const http = require("http");
-//const filesystem = require("fs");
-
-// SERVIDOR WEB
+const filesystem = require("fs");
 
 const server = http.createServer((request, response) => {
-  fs.createReadStream("index.html").pipe(response);
+  response.setHeader("Content-Type", "text/html");
+  // aqui mando el html que quiero que se escriba, para eso uso readFileSync y el nombre dle html
+  response.write(filesystem.readFileSync("index.html"));
+  response.end();
 });
 
-// mi servidor escucha las peticiones en
-server.listen(4000);
+server.listen(3000);
