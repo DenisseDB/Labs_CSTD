@@ -30,7 +30,7 @@ app.use((request, response, next) => {
 // UNA RESPUESTA OPOR RUTA
 // si la ruta no coincide se salta al suguiente middleware
 // si coincide hace lo de la ruta hola
-const rutas_trivia = require("./routes/trivia.routes");
+const rutas_trivia = require("../trivia.routes");
 app.use("/adivina", rutas_trivia);
 
 // especifica
