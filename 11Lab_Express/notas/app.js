@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-//bodyparser
+//bodyparser objeto body es donde se accede a lo que mandas al post
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Middleware
@@ -30,7 +30,7 @@ app.use((request, response, next) => {
 // UNA RESPUESTA OPOR RUTA
 // si la ruta no coincide se salta al suguiente middleware
 // si coincide hace lo de la ruta hola
-const rutas_trivia = require("../trivia.routes");
+const rutas_trivia = require("./routes/trivia.routes");
 app.use("/adivina", rutas_trivia);
 
 // especifica
