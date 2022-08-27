@@ -23,8 +23,12 @@ router.post("/informes", (request, response, next) => {
   let html =
     "<!DOCTYPE html>" +
     '<head><meta charset="UTF-8"></head>' +
-    "h1>Gracias hemos recibido tu duda y correo electronico :) </h1>" +
-    "<p> queda atento a tu correo que en breve nos pondremos en contacto contigo </p>";
+    "<h1>Gracias hemos recibido tu interes del termo " +
+    request.body.termoInteres + // con request.body. agregamos el id del objeto que queremos amnipular obtenido del get
+    " y correo electronico :) </h1>" +
+    "<p> queda atento a tu correo " +
+    request.body.correo +
+    " que en breve nos pondremos en contacto contigo </p>";
   response.send(html);
 });
 
