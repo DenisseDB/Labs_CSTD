@@ -5,6 +5,14 @@ const path = require("path");
 
 const app = express();
 
+/*
+Los archivos EJS (.ejs), son archivos que en su mayoría contienen código HTML, 
+pero que también permiten escribir código JS, utilizando tags con el símbolo % de la siguiente forma: 
+<% código de javascript %>.
+*/
+app.set("view engine", "ejs");
+app.set("views", "views");
+
 // mandar css de manera estatica, la carpeta se llama public y ahi esta todo el css
 app.use(express.static(path.join(__dirname, "public")));
 
