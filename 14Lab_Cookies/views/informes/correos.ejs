@@ -1,0 +1,13 @@
+<%- include('../includes/head.ejs') %>
+<h1>Los correos que han solicitado informes son <%= correo %></h1>
+<% if (correosEnviados.length > 0) { %>
+<div class="collection">
+  <% for (let g of correosEnviados) { %>
+  <a href="#!" class="collection-item"><%= g.mail %></a>
+  <% } %>
+</div>
+<% } else { %>
+<h2>No hay solicitudes previas</h2>
+<% } %>
+<p>Le has pedido a Paul que adivine <%= clicks %> veces</p>
+<%- include('../includes/foot.ejs') %>

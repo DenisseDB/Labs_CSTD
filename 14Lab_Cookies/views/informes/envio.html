@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Swell</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+      </div>
+    </nav>
+
+    <h6>
+      Gracias por tu interes en nuestros termos, llena los siguientes datos y un
+      asesor se pondra en contacto pronto :)
+    </h6>
+    <form action="informes" method="POST">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <label for="correo">Correo: </label>
+              <input id="correo" type="text" name="correo" />
+            </div>
+            <div class="input-field col s6">
+              <label for="termoInteres">Me intersa el termo...</label>
+              <input type="text" name="termoInteres" id="termoInteres" />
+            </div>
+          </div>
+          <input type="submit" value="enviarSolicitud" />
+        </form>
+      </div>
+    </form>
+  </body>
+</html>
