@@ -28,6 +28,10 @@ const rutasNuestrosTermos = require("./routes/rutasNuestrosTermos");
 const { request } = require("http");
 app.use("/swell", rutasNuestrosTermos);
 
+// ruta 3
+const rutasSorteo = require("./routes/rutasSorteo");
+app.use("/participa", rutasSorteo);
+
 app.get("/creadora", (request, response, next) => {
   response.sendFile(path.join(__dirname, "views", "index.html"));
 });
