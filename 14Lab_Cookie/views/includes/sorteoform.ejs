@@ -1,0 +1,25 @@
+<!-- ENVIO DE DATOS-->
+<!--action es el path a donde mandas la forma -->
+<!-- si le agregas el / se va al / original -->
+<form action="sorteo" method="POST">
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="nombre">Nombre</label>
+          <!-- en back end lo que uso es el name -->
+          <input type="text" id="nombre" name="nombre" />
+        </div>
+        <div class="input-field col s6">
+          <label for="telefono">Telefono</label>
+          <input type="text" id="telefono" name="telefono" />
+        </div>
+        <div class="input-field col s12">
+          <label for="dinos">¿porque eres swell lover?</label>
+          <input type="text" id="dinos" name="dinos" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="submit" value="Participacion" />
+</form>

@@ -2,6 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
@@ -18,6 +20,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //bodyparser
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+// trabajar con variables de sesion
+app.use(
+  session({
+    secret: "f3efafqeafqewfqwefqergtrwh5trgawgtrshgaeatrge",
+    resave: false, //La sesión no se guardará en cada petición, sino sólo se guardará si algo cambió
+    saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
+  })
+);
+
+const rutaUsuario = require("./routes/user.routes");
+app.use("/user", rutaUsuario);
 
 // ruta 1 POST Y GET
 const rutasInformes = require("./routes/rutasInformes.routes");
