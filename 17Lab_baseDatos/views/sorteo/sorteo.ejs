@@ -1,0 +1,15 @@
+<%- include('../includes/head.ejs') %> <%- include('../includes/nav.ejs') %> <%-
+include('../includes/trivia.form.ejs') %>
+<h1>Las personas que han participado son <%= nombre %></h1>
+<% if (nombresSorteo.length > 0) { %>
+<div class="collection">
+  <% for (let g of nombresSorteo) { %>
+  <a href="#!" class="collection-item"> <%= g.nombre %></a>
+  <% } %>
+</div>
+<% } else { %>
+<h2>No hay solicitudes previas</h2>
+<% } %>
+<p>En total estas compitiendo contra <%= clicks %> participantes</p>
+<p>La ultima persona en participar fue <%= nombre %></p>
+<%- include('../includes/foot.ejs') %>

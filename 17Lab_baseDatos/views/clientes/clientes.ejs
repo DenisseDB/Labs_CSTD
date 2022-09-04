@@ -1,0 +1,11 @@
+<%- include('../includes/head.ejs') %>
+<h1>Clientes participando en el sorteo</h1>
+<% if (clientes.length > 0) { %>
+<div class="collection">
+  <% for (let c of clientes) { %>
+  <a href="#!" class="collection-item"><%= c.nombre %></a>
+  <% } %>
+</div>
+<% } else { %>
+<h2>No hay clientes registrados</h2>
+<% } %> <%- include('../includes/foot.ejs') %>
