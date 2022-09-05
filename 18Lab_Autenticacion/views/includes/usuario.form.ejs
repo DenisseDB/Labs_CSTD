@@ -1,0 +1,27 @@
+<h1>Registrar un nuevo usuario</h1>
+<form action="new" method="POST">
+  <fieldset>
+    <legend>Datos del usuario</legend>
+    <input placeholder="DenisseDB" id="user" name="user" type="text" required />
+    <label for="user">Nombre de usuario</label>
+    <input
+      placeholder="*******"
+      id="contrasena"
+      name="contrasena"
+      type="text"
+      required
+      pattern=".{8,}"
+    />
+    <label for="contrasena">Contraseña</label>
+    <input
+      placeholder="Denisse"
+      id="nombre"
+      name="nombre"
+      type="text"
+      required
+    />
+    <label for="nombre">Nombre: </label>
+  </fieldset>
+  <br />
+  <input type="submit" class="btn" value="Registrar" />
+</form>
