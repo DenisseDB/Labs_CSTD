@@ -30,7 +30,6 @@ exports.postNuevo = (request, response, next) => {
 exports.getLogin = (request, response, next) => {
   response.render(path.join("usuarios", "login.ejs"), {
     isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
-    csrfToken: request.csrfToken(),
   });
 };
 

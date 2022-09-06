@@ -35,6 +35,11 @@ app.use(
 const csrfProtection = csrf();
 app.use(csrfProtection);
 
+app.use((request, response, next) => {
+  response.locals.csrfToken = request.csrfToken();
+  next();
+});
+
 const rutaUsuario = require("./routes/user.routes");
 app.use("/user", rutaUsuario);
 
