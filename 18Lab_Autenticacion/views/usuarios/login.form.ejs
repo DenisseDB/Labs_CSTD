@@ -1,6 +1,7 @@
 <h1>Acceder</h1>
 <form action="login" method="POST">
   <fieldset>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
     <legend>Datos del usuario</legend>
     <input placeholder="DenisseDB" id="user" name="user" type="text" required />
     <label for="user">Nombre de usuario</label>

@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const csrf = require("csurf");
 
 const app = express();
 
@@ -30,6 +31,9 @@ app.use(
     saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
   })
 );
+
+const csrfProtection = csrf();
+app.use(csrfProtection);
 
 const rutaUsuario = require("./routes/user.routes");
 app.use("/user", rutaUsuario);

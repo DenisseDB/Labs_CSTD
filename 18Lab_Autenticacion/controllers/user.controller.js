@@ -28,8 +28,10 @@ exports.postNuevo = (request, response, next) => {
 };
 
 exports.getLogin = (request, response, next) => {
-  // render es poner el ejs que queiro que me regrese
-  response.render(path.join("usuarios", "login.ejs"));
+  response.render(path.join("usuarios", "login.ejs"), {
+    isLoggedIn: request.session.isLoggedIn ? request.session.isLoggedIn : false,
+    csrfToken: request.csrfToken(),
+  });
 };
 
 exports.postLogin = (request, response, next) => {
@@ -47,14 +49,12 @@ exports.postLogin = (request, response, next) => {
             if (doMatch) {
               request.session.isLoggedIn = true;
               request.session.user = rows[0].nombre;
-              console.log("2");
               return request.session.save((err) => {
-                response.redirect("/creadora");
+                response.redirect("/enviar/informes");
               });
             }
             // no existe
             else console.log("El usuario no existe");
-            console.log("3");
             return response.redirect("/user/login");
           })
           .catch((err) => {
@@ -63,7 +63,6 @@ exports.postLogin = (request, response, next) => {
           });
       } else {
         console.log("el user o contra no existe");
-        console.log("5");
         return response.render("error.ejs");
       }
     })
@@ -76,6 +75,6 @@ exports.postLogin = (request, response, next) => {
 
 exports.logout = (request, response, next) => {
   request.session.destroy(() => {
-    response.redirect("/participa/sorteo"); //Este código se ejecuta cuando la sesión se elimina.
+    response.redirect("/user/login"); //Este código se ejecuta cuando la sesión se elimina.
   });
 };
