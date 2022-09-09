@@ -1,0 +1,4 @@
+Branch develop
+Commit: "menu funciona acorde login"
+Link: https://github.com/DenisseDB/SmarTech2/blob/develop/controllers/user.controller.js
+
